@@ -26,7 +26,7 @@ Animals, an example of a tree;
 
 The format is a simple unique numeric id and alphanumeric label eg, `id: label`. Indentation indicates a child relationship. So, `1: root` has the children `2: ant, 3: bear, 7: frog`.
 Clone this repo, create a branch, follow engineering best practices. Consider tests for any functions you write, and ensure that any requests made on the api's are valid and maintain the integrity of the data.
-There are a number of "hello world" services in directories named after the programming language of implementation. Feel free to choose which ever language you are most comfortable in (not just rails or javascript).
+
 Spend **between one to two hours** in advance of the in person interview. Remaining tasks will form the basis of the in person code challenge, where you will pair with engineers from Escrowtab. Email us when pushed to let us know your work is ready for review.
 `1, 5, 6, 2, 3, 4`
 Note: we do not expect or require you to complete all 6 tasks either in advance or in person in order to receive an offer. We expect you to use this as an opportunity to demonstrate good design decisions, coding best practices, comprehension, and the ability to consider edge-cases.
