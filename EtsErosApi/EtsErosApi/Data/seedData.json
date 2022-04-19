@@ -1,0 +1,37 @@
+[
+  {
+    "Id": 1,
+    "Label": "root",
+    "ParentId": null
+  },
+  {
+    "Id": 2,
+    "Label": "ant",
+    "ParentId": 1
+  },
+  {
+    "Id": 3,
+    "Label": "bear",
+    "ParentId": 1
+  },
+  {
+    "Id": 4,
+    "Label": "cat",
+    "ParentId": 3
+  },
+  {
+    "Id": 5,
+    "Label": "dog",
+    "ParentId": 3
+  },
+  {
+    "Id": 6,
+    "Label": "elephant",
+    "ParentId": 5
+  },
+  {
+    "Id": 7,
+    "Label": "frog",
+    "ParentId": 1
+  }
+]

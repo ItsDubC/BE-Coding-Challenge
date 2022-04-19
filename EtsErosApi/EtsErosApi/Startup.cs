@@ -1,7 +1,10 @@
+using EtsErosApi.Data;
+using EtsErosApi.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,12 +29,16 @@ namespace EtsErosApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("Eros_dev"));
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EtsErosApi", Version = "v1" });
             });
+
+            services.AddScoped<ITreeRepository, TreeRepository>();
+            services.AddScoped<ITreeService, TreeService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
+using System.Linq;
 
 namespace EtsErosApi.Util
 {
@@ -36,7 +37,7 @@ namespace EtsErosApi.Util
 
         public override bool CanConvert(Type objectType)
         {
-            return true;
+            return _types.Any(t => t == objectType);
         }
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)

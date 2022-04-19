@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EtsErosApi", "EtsErosApi\EtsErosApi.csproj", "{DA1D70EA-F00E-4D97-B9FE-05FD3BD9D6D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EtsErosApi", "EtsErosApi\EtsErosApi.csproj", "{DA1D70EA-F00E-4D97-B9FE-05FD3BD9D6D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EtsErosApi.Test", "EtsErosApi.Test\EtsErosApi.Test.csproj", "{BA94AD7B-D08B-41B2-9E98-36882D0B9AE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DA1D70EA-F00E-4D97-B9FE-05FD3BD9D6D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA1D70EA-F00E-4D97-B9FE-05FD3BD9D6D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA1D70EA-F00E-4D97-B9FE-05FD3BD9D6D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA94AD7B-D08B-41B2-9E98-36882D0B9AE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA94AD7B-D08B-41B2-9E98-36882D0B9AE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA94AD7B-D08B-41B2-9E98-36882D0B9AE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA94AD7B-D08B-41B2-9E98-36882D0B9AE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
