@@ -28,11 +28,17 @@ namespace EtsErosApi.Util
             JObject obj = new JObject();
             obj.Add(node.Id.ToString(), innerObj);
 
-            // Add to array & write
-            JArray arr = new JArray();
-            arr.Add(obj);
-
-            arr.WriteTo(writer);
+            // Wrap in array if root
+            if (node.ParentId == null)
+            {
+                JArray arr = new JArray();
+                arr.Add(obj);
+                arr.WriteTo(writer);
+            }
+            else
+            {
+                obj.WriteTo(writer);
+            }
         }
 
         public override bool CanConvert(Type objectType)

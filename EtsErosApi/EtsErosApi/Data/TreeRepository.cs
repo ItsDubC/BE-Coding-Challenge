@@ -44,7 +44,11 @@ namespace EtsErosApi.Data
         /// <inheritdoc />
         public async Task<bool> DeleteNode(int nodeId)
         {
-            var node = GetNodeByIdAsync(nodeId);
+            var node = await GetNodeByIdAsync(nodeId);
+
+            if (node == null)
+                throw new System.Exception($"Tree Node with ID {nodeId} does not exist.");
+
             _context.Remove(node);
             var changeCount = await _context.SaveChangesAsync();
             return changeCount > 0;

@@ -19,6 +19,10 @@ namespace EtsErosApi.Controllers
             this._treeService = treeService;
         }
 
+        /// <summary>
+        /// Get entire tree starting w/ the root
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<ActionResult> GetEntireTree()
         {
@@ -26,6 +30,11 @@ namespace EtsErosApi.Controllers
             return Ok(ConvertToEtsJson(tree));
         }
 
+        /// <summary>
+        /// Get single node w/ children based on ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public async Task<ActionResult> GetNode(int id)
         {
@@ -33,6 +42,11 @@ namespace EtsErosApi.Controllers
             return Ok(ConvertToEtsJson(node));
         }
 
+        /// <summary>
+        /// Add new TreeNode
+        /// </summary>
+        /// <param name="newNodeDto"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] AddNodeDto newNodeDto)
         {
@@ -45,6 +59,11 @@ namespace EtsErosApi.Controllers
             return BadRequest();
         }
 
+        /// <summary>
+        /// Delete TreeNode by ID if it exists and has no children
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
@@ -56,7 +75,12 @@ namespace EtsErosApi.Controllers
 
             return BadRequest($"Unable to delete node {id} because it has children");
         }
-
+        /// <summary>
+        /// Change TreeNode's parent
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="updateNodeDto"></param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         public async Task<ActionResult> Put(int id, [FromBody] UpdateNodeDto updateNodeDto)
         {
